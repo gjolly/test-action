@@ -15,5 +15,8 @@ jobs:
       - name: IMDS
         run: curl -s -H Metadata:true --noproxy "*" "http://169.254.169.254/metadata/instance?api-version=2021-02-01"
 
+      - name: apt 
+        run: sudo apt-get update -y && sudo apt-get upgrade -y
+
       - name: cloud info
         run: cat /etc/cloud/build.info
